@@ -1,0 +1,301 @@
+/* Fundo do banner principal com obras como marca d'água */
+.profile-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.profile-bg-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  opacity: 0.18;
+  transition: opacity 1.5s;
+  filter: blur(2px) grayscale(0.2);
+  pointer-events: none;
+}
+.profile {
+  position: relative;
+  z-index: 2;
+}
+header {
+  position: relative;
+  margin-top: 60px;
+  min-height: 380px;
+  overflow: hidden;
+}
+/* Mosaico de obras principais */
+.mosaic-section {
+  padding: 40px 0;
+  background: #fff;
+  text-align: center;
+}
+.mosaic-section h3 {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  color: #7b2ff2;
+}
+.mosaic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.mosaic img {
+  height: auto;
+  width: auto;
+  max-width: 220px;
+  max-height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(123,47,242,0.10);
+  transition: transform 0.2s;
+  margin: 0;
+  object-fit: contain;
+  background: #fff;
+}
+.mosaic img:hover {
+  transform: scale(1.04);
+}
+/* Rastro de brilhos do cursor */
+#sparkle-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+}
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e0c3fc 0%, #b47bfa 60%, #7b2ff2 100%);
+  box-shadow: 0 0 10px 3px #b47bfa88, 0 0 6px 1px #e0c3fc;
+  opacity: 0.7;
+  animation: sparkle-fade 0.5s linear forwards;
+}
+@keyframes sparkle-fade {
+  0% { opacity: 1; transform: scale(1); }
+  80% { opacity: 0.5; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.6); }
+}
+/* Menu fixo no topo */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(123,47,242,0.08);
+  z-index: 100;
+}
+.menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 18px 0 12px 0;
+}
+.menu li {
+  font-size: 1.1rem;
+}
+.menu a {
+  color: #7b2ff2;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.menu a:hover {
+  background: #e0c3fc;
+  color: #222;
+}
+header {
+  margin-top: 50px;
+}
+/* Carrossel de obras */
+.carousel-section {
+  padding: 40px 0;
+  background: #fff;
+  text-align: center;
+}
+.carousel-section h3 {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  color: #7b2ff2;
+}
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel-images {
+  width: 340px;
+  height: 340px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-images img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(123,47,242,0.12);
+  transition: opacity 0.5s;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.carousel-images img.active {
+  opacity: 1;
+  position: relative;
+}
+.carousel-btn {
+  background: #7b2ff2;
+  color: #fff;
+  border: none;
+  font-size: 2.2rem;
+  padding: 0 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-btn:hover {
+  background: #8ec5fc;
+  color: #7b2ff2;
+}
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #222;
+  cursor: none;
+}
+#custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+#custom-cursor img {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+header {
+  background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+  padding: 40px 0 20px 0;
+  text-align: center;
+}
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  color: #555;
+}
+.bio {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #333;
+}
+.works {
+  padding: 40px 0;
+  background: #fff;
+  text-align: center;
+}
+.works h3 {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  color: #7b2ff2;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(123,47,242,0.12);
+  transition: transform 0.2s;
+}
+.gallery img:hover {
+  transform: scale(1.04);
+}
+.about {
+  padding: 40px 0;
+  background: #f7f7f7;
+  text-align: center;
+}
+.about h3 {
+  font-size: 1.5rem;
+  color: #7b2ff2;
+  margin-bottom: 20px;
+}
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+footer {
+  background: #7b2ff2;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+a {
+  color: #7b2ff2;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #8ec5fc;
+}
