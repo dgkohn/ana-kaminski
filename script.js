@@ -1,5 +1,6 @@
 // Pequena animação de fade-in para as seções
 window.addEventListener('DOMContentLoaded', () => {
+  // Fade-in das seções
   document.querySelectorAll('section, header').forEach(el => {
     el.style.opacity = 0;
     el.style.transform = 'translateY(30px)';
